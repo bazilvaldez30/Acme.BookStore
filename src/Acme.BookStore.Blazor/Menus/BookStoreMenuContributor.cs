@@ -68,7 +68,9 @@ public class BookStoreMenuContributor : IMenuContributor
         }
         else
         {
+#pragma warning disable CS0162 // Unreachable code detected
             administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
+#pragma warning restore CS0162 // Unreachable code detected
         }
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
